@@ -15,6 +15,18 @@
 // Empty string when using an empty array:
 //var_dump(implode('hello', array())); // string(0) ""
 
-print_r(phpinfo());
+//print_r(phpinfo());
+
+var_dump('2222');
+echo '<br/>';
+var_export('222');
+echo '<br/>';
+var_export('2', TRUE);
+echo '<br/>';
+$input = array("Neo", "Morpheus", "Trinity", "Cypher", "Tank");
+$rand_keys = array_rand($input, 2);
+echo $input[$rand_keys[0]] . "\n";
+echo $input[$rand_keys[1]] . "\n";
+
 
 ?>
