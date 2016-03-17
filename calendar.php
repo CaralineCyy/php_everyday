@@ -19,5 +19,37 @@ echo "<br/>";
 echo date("M-d-Y", easter_date(1999));  
 
 echo "<br/>";
-echo easter_days(2016);        
+echo easter_days(2016);   
+
+echo "<br/>";
+$date = new DateTime('2000-01-01');
+$date->add(new DateInterval('P10D'));
+echo $date->format('Y-m-d') . "\n";//2000-01-11
+
+echo "<br/>";
+$date = DateTime::createFromFormat('j-M-Y', '15-Feb-2009');
+echo $date->format('Y-m-d');
+
+echo "<br/>";
+$date = new DateTime('2016-12-12');
+$date->modify('+1 day');
+echo $date->format('Y-m-d');
+
+echo "<br/>";
+$date = new DateTime();
+$date->setDate(2001, 2, 3);
+echo $date->format('Y-m-d');
+
+
+$date = new DateTime();
+$date->setISODate(2008, 2);
+echo "<br/>";
+echo $date->format('Y-m-d') . "\n";
+$date->setISODate(2008, 2, 7);
+echo $date->format('Y-m-d') . "\n";
+
+
+
+
+
 
