@@ -48,6 +48,56 @@ echo $date->format('Y-m-d') . "\n";
 $date->setISODate(2008, 2, 7);
 echo $date->format('Y-m-d') . "\n";
 
+echo "<br/>";
+$date = new DateTime();
+echo $date->format('U = Y-m-d H:i:s') . "\n";
+$date->setTimestamp(1171502725);
+echo $date->format('U = Y-m-d H:i:s') . "\n";
+
+echo "<br/>";
+$date = new DateTime('2000-01-01', new DateTimeZone('Pacific/Nauru'));
+echo $date->format('Y-m-d H:i:sP') . "\n";
+$date->setTimezone(new DateTimeZone('Pacific/Chatham'));
+echo $date->format('Y-m-d H:i:sP') . "\n";
+
+echo "<br/>";
+$date = new DateTime('2000-01-20');
+$date->sub(new DateInterval('P10D'));
+echo $date->format('Y-m-d') . "\n";
+
+echo "<br/>";
+//两个时间之间的时间间隔
+$datetime1 = new DateTime('2009-10-11');
+$datetime2 = new DateTime('2009-10-13');
+$interval = $datetime1->diff($datetime2);
+echo $interval->format('%R%a days');
+
+echo "<br/>";
+$date = new DateTime('2000-01-01');
+echo $date->format('Y-m-d H:i:s');
+
+echo "<br/>";
+$winter = new DateTime('2010-12-21', new DateTimeZone('America/New_York'));
+$summer = new DateTime('2008-06-21', new DateTimeZone('America/New_York'));
+echo $winter->getOffset() . "\n";
+echo $summer->getOffset() . "\n";
+
+echo "<br/>";
+$date = new DateTime();
+echo $date->getTimestamp();
+
+echo "<br/>";
+$date = new DateTime(null, new DateTimeZone('Europe/London'));
+$tz = $date->getTimezone();
+echo $tz->getName();
+
+echo "<br/>";
+echo "<pre>";
+$tz = new DateTimeZone("Europe/Prague");
+print_r($tz->getLocation());
+print_r(timezone_location_get($tz));
+
+
 
 
 
