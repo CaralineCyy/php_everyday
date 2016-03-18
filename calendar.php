@@ -97,6 +97,26 @@ $tz = new DateTimeZone("Europe/Prague");
 print_r($tz->getLocation());
 print_r(timezone_location_get($tz));
 
+//checkdate用于验证一个验证一个格里高里日期(就是公历)
+var_dump(checkdate(12, 31, 2000));
+var_dump(checkdate(2, 29, 2001));
+
+echo "<br/>";
+echo "<pre>";
+print_r(date_parse("2006-12-12 10:00:00.5"));
+
+echo "<br/>";
+echo "<pre>";
+$today = getdate();
+print_r($today);
+
+echo "<br/>";
+echo mktime (0,0,0,1,1,2000);
+
+
+
+
+
 
 
 
