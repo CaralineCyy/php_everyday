@@ -110,8 +110,11 @@ echo "<pre>";
 $today = getdate();
 print_r($today);
 
+
+
 echo "<br/>";
 echo mktime (0,0,0,1,1,2000);
+
 
 
 
