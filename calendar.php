@@ -113,6 +113,7 @@ print_r($today);
 
 //返回Uinx时间戳
 echo "<br/>";
+//hour,minute,second,month,day,year
 echo mktime (0,0,0,1,1,2000);
 
 
