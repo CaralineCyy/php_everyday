@@ -17,7 +17,7 @@ $attribute_array = array(
     'size' => 1
     )
 );
-//  创建一个XML文档并设置XML版本和编码。。
+//  创建一个XML文档并设置XML版本和编码。
 $dom=new DomDocument('1.0', 'utf-8');
 //  创建根节点
 $article = $dom->createElement('article');
@@ -28,6 +28,7 @@ foreach ($data_array as $data) {
     create_item($dom, $item, $data, $attribute_array);
 }
 echo $dom->saveXML();
+
 function create_item($dom, $item, $data, $attribute) {
     if (is_array($data)) {
         foreach ($data as $key => $val) {
