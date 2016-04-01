@@ -62,13 +62,32 @@
    $redis->set('b','des');
    $now = time(null);
    $redis->expireAt('b',$now+3);
-   sleep(5);
+   //sleep(5);
    echo $redis->get('b').'<br/>';
 
+   //返回某种计算模式取得的keys
    $allKeys=$redis->keys('*');
    $keyWithUserPrefix=$redis->keys('*');
    print_r($keyWithUserPrefix);
    echo '<br/>';
+
+   //返回数据库中有多少个key
+   $count=$redis->dbSize();
+   echo "Redis has $count keys\n";
+
+
+   //使用密码验证链接
+   //$redis->auth('foobared');
+
+   //使用aof来进行数据库的持久化
+   $redis->bgrewriteaof();
+
+
+
+
+
+
+
 
 
 
