@@ -80,7 +80,19 @@
    //$redis->auth('foobared');
 
    //使用aof来进行数据库的持久化
-   $redis->bgrewriteaof();
+   //$redis->bgrewriteaof();
+   //同步写入到磁盘
+   //$redis->save();
+   //异步写入到磁盘
+   //$redis->bgSave();
+
+   //返回最后一次数据磁盘持久化的时间
+   echo $redis->lastSave().'<br/>';
+
+   //返回key所指向的VALUE的数据类型
+   //$redis->type('key');
+
+
 
 
 
