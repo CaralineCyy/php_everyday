@@ -1,5 +1,5 @@
 <?php
-error_reporting(E_ALL ^ E_NOTICE);
+// error_reporting(E_ALL ^ E_NOTICE);
 //$test = 123;
 //$str='aaa"bbb"';echo $str."<br>";
 //$str1="'sss'$str";echo $str1."<br>";
@@ -121,6 +121,51 @@ error_reporting(E_ALL ^ E_NOTICE);
 //echo strtotime('2016-03-29 22:48:04');
 //echo '<br/>';
 //echo time();
-echo 'pre';
-print_r(phpinfo());
+// echo 'pre';
+// print_r(phpinfo());
+// function encode_json($str) { 
+//     $strjson = urldecode(json_encode(url_encode($str))); 
+//     return  str_replace ( "\\/", "/", $strjson);   
+// }  
+	  
+// function url_encode($str,$key="") {  
+//     if(is_array($str)) {  
+//         foreach($str as $key=>$value) {  
+//             $str[urlencode($key)] = url_encode($value,$key);  
+//         }  
+//     }else{  
+//        if(($key=="type") || ($key=="chargeType") || ($key=="playIndex") || ($key == "freePlayEpisode")|| ($key == "freePlayTime")|| ($key == "cid")|| ($key=="catecode")){
+//        	 $str = $str;  
+
+//        }else{
+//        	$str = urlencode($str);
+//        }
+      
+//     }      
+//     return $str;  
+// } 
+// $arrayName = array('type' =>3 , 
+// 	'data'=>array(
+// 		'chargeType' => 1, 
+// 		'playIndex' => 2, 
+// 		'freePlayEpisode' => 3, 
+// 		'freePlayTime' => -1, 
+// 		'cid' => 0,
+// 		'catecode' => 6, 
+// 		'hanzi'=>"测试",
+// 		'url'=>"http://blog.csdn.net/shilang999/article/details/13995173",
+// 		)
+// 	);
+// //echo urldecode(json_encode(url_encode($arrayName)));
+// 	echo encode_json($arrayName);
+
+$mm = new Mongo();
+   $conn = $mm->mydb->bar
+   $cursor = $conn->findOne();
+   var_dump( $obj ); exit;
+   // 迭代显示文档标题
+   foreach ($cursor as $document) {
+      echo $document["name"] . "\n";
+   }
+
 ?>
