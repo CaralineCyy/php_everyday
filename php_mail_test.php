@@ -9,15 +9,15 @@ function smtp_mail($sendto_email, $subject, $body, $extra_hdrs, $user_name) {
 	$mail->Host = "smtp.qq.com";   // SMTP servers   
 	$mail->Port = '465';
 	$mail->SMTPAuth = true;  // turn on SMTP authentication    
-	$mail->Username = "1835373375@qq.com";  // SMTP username  注意：普通邮件认证不需要加 @域名    
-	$mail->Password = "cyy0623"; // SMTP password    
-	$mail->From = "1835373375@qq.com";//"1835373375@qq.com";   // 发件人邮箱    
-	$mail->FromName = "夏了夏天";  // 发件人    
+	$mail->Username = "1835375@qq.com";  // SMTP username  注意：普通邮件认证不需要加 @域名    
+	$mail->Password = "cyy06"; // SMTP password    
+	$mail->From = "183535@qq.com";//"1835373375@qq.com";   // 发件人邮箱    
+	$mail->FromName = "夏天";  // 发件人    
 
 	$mail->CharSet = "utf-8";   // 这里指定字符集！    
 	$mail->Encoding = "base64";
 	$mail->AddAddress($sendto_email, "username");  // 收件人邮箱和姓名    
-	$mail->AddReplyTo("1835373375@qq.com", "First Last");
+	$mail->AddReplyTo("1833375@qq.com", "First Last");
 	//$mail->WordWrap = 50; // set word wrap 换行字数    
 	//$mail->AddAttachment("/var/tmp/file.tar.gz"); // attachment 附件    
 	//$mail->AddAttachment("/tmp/image.jpg", "new.jpg");    
@@ -74,15 +74,15 @@ $mail->Port = 465;
 //Whether to use SMTP authentication
 $mail->SMTPAuth = true;
 //Username to use for SMTP authentication
-$mail->Username = '1835373375@qq.com';//"819664855@qq.com";
+$mail->Username = '1835375@qq.com';//"819664855@qq.com";
 //Password to use for SMTP authentication
-$mail->Password = 'cyy0623';//"xhc100606";
+$mail->Password = 'cyy06';//"xhc100606";
 //Set who the message is to be sent from
-$mail->setFrom('1835373375@qq.com', '夏了夏天');
+$mail->setFrom('18375@qq.com', '夏天');
 //Set an alternative reply-to address
 //$mail->addReplyTo('replyto@example.com', 'First Last');
 //Set who the message is to be sent to
-$mail->addAddress('819664855@qq.com', 'hongcheng.xu');
+$mail->addAddress('8195@qq.com', 'ho.xu');
 //Set the subject line
 $mail->Subject = '你好，中国';
 //Read an HTML message body from an external file, convert referenced images to embedded,
