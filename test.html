@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>TODO write content</div>
+        <form>
+        	<input id="json" name="json"/>
+        	<a href="javascript:void(0)" onclick="check()">跳转测试</a>
+        </form>>
+
+
+		<script type="text/javascript" src="./jquery.min.js"></script>>
+        <script type="text/javascript">
+        	function check(){
+        		var data = $("#json").val();
+        		$.ajax({ 
+		        	url: './test.php', 
+		        	type: 'POST', 
+		        	data: {'data': data},
+		        	success:function(data){
+		        			
+     	    }
+        });
+        	}
+
+
+        </script>>
+    </body>
+</html>
