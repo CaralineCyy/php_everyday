@@ -1,8 +1,39 @@
 <?php
-$tempArray = array('aa','bb','cc','rr','rrr','333');
-$aa = array_slice($tempArray, 0, 5);
-print_r($aa)
-// echo date('Y-m-d',strtotime("+1 day"));
+class A{
+
+public $a;
+
+function __constuct(){
+
+	$this->$a = 1;
+}
+
+
+}
+
+
+class B extends A{
+
+public function test(){
+ 
+ $obj = new self();
+
+ return $obj->$a;
+
+}
+
+
+}
+
+$b = new B();
+echo $b->test();
+
+
+
+// $tempArray = array('aa','bb','cc','rr','rrr','333');
+// $aa = array_slice($tempArray, 0, 5);
+// print_r($aa)
+// echo date('Y-m-d',1489051416);
 // exit; 
 // echo json_encode($a);
 // exit;

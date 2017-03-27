@@ -1,4 +1,5 @@
 <?php
+//可变函数
 function foo() {
     echo "In foo()<br />\n";
 }
