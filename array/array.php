@@ -1,32 +1,35 @@
 <?php
-class A{
+$tempArray = array("1","4","6","1","4","6");
+$arr = array_slice($tempArray, 0, 5);
+print_r($arr);
+// class A{
 
-public $a;
+// public $a;
 
-function __constuct(){
+// function __constuct(){
 
-	$this->$a = 1;
-}
-
-
-}
+// 	$this->$a = 1;
+// }
 
 
-class B extends A{
+// }
 
-public function test(){
+
+// class B extends A{
+
+// public function test(){
  
- $obj = new self();
+//  $obj = new self();
 
- return $obj->$a;
+//  return $obj->$a;
 
-}
+// }
 
 
-}
+// }
 
-$b = new B();
-echo $b->test();
+// $b = new B();
+// echo $b->test();
 
 
 
